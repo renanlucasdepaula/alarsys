@@ -1,0 +1,59 @@
+{
+  "Equipamentos": [
+    {
+      "nomeEquipamento": "Equipamento 1",
+      "numeroSerie": "1002930491",
+      "tipo": "Corrente",
+      "dataCadastro": "2010-10-20",
+      "id": 1
+    },
+    {
+      "nomeEquipamento": "Equipamento 2",
+      "numeroSerie": "1001930492",
+      "tipo": "Óleo",
+      "dataCadastro": "2019-05-10",
+      "id": 2
+    },
+    {
+      "nomeEquipamento": "Equipamento 3",
+      "numeroSerie": "1221932452",
+      "tipo": "Tensão",
+      "dataCadastro": "2018-07-08",
+      "id": 3
+    }
+  ],
+  "Alarmes": [
+    {
+      "descAlarme": "Alarme 1",
+      "equipamentoRelacionado": "Equipamento 3",
+      "classificacao": "Alto",
+      "dataCadastro": "2002-01-01",
+      "id": "Cm80eXo"
+    }
+  ],
+  "AlarmesAtuados": [
+    {
+      "dataEntrada": "2010-01-01",
+      "dataSaida": "2011-01-01",
+      "descAlarm": "Alarme 1",
+      "descEquipamento": "Equipamento 1",
+      "id": 1
+    },
+    {
+      "descAlarm": "Alarme 2",
+      "descEquipamento": "Equipamento 2",
+      "dataEntrada": "2011-01-01",
+      "dataSaida": "2018-03-03",
+      "statusAlarme": "Off",
+      "id": 2
+    },
+    {
+      "dataEntrada": "2019-02-02",
+      "dataSaida": "2020-03-02",
+      "descAlarm": "Alarme 3",
+      "descEquipamento": "Equipamento 5",
+      "statusAlarme": "On",
+      "id": 3
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+.icon-d{
+    color: #fefefe;
+    font-family: "Fira Code";
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 10px;
+    align-content: center;
+    text-decoration: none;
+}
+link {
+    text-decoration: none;
+}
+.logo {
+    background-color: var(--bg-dark);
+
+}
+.logo:hover{
+    background: linear-gradient(135deg,#07a7e3 0%, #32dac3 100%);
+    display: inline;
+    align-items: center;
+    text-decoration: none;
+}

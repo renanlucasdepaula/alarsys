@@ -1,0 +1,22 @@
+.menu-area {
+    background-color: var(--bg-dark);
+}
+
+.menu a {
+    display: inline;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+    color: #fefefe;
+    font-weight: bold;
+    font-size: larger;
+    padding: 60px;
+
+}
+
+.menu a:hover {
+    background: linear-gradient(135deg,#07a7e3 0%, #32dac3 100%);
+    display: inline;
+    align-items: center;
+    border-radius: 10px;
+}
