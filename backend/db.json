@@ -1,7 +1,7 @@
 {
   "Equipamentos": [
     {
-      "nomeEquipamento": "Equipamento 1",
+      "nomeEquipamento": "teste",
       "numeroSerie": "1002930491",
       "tipo": "Corrente",
       "dataCadastro": "2010-10-20",
@@ -24,27 +24,34 @@
   ],
   "Alarmes": [
     {
-      "descAlarme": "Alarme 1",
-      "equipamentoRelacionado": "Equipamento 3",
+      "descAlarme": "Teste",
+      "equipamentoRelacionado": "Equipamento 1",
+      "classificacao": "Médio",
+      "dataCadastro": "2019-02-02",
+      "id": "jYGziQz"
+    },
+    {
+      "descAlarme": "Alarme 5",
       "classificacao": "Alto",
-      "dataCadastro": "2002-01-01",
-      "id": "Cm80eXo"
+      "id": "Yqm953-",
+      "equipamentoRelacionado": "Equipamento 2",
+      "dataCadastro": "2019-02-02"
+    },
+    {
+      "descAlarme": "Alarme 4",
+      "id": "JrBm_OA",
+      "equipamentoRelacionado": "Equipamento 2",
+      "classificacao": "Médio",
+      "dataCadastro": "2019-02-20"
     }
   ],
   "AlarmesAtuados": [
     {
-      "dataEntrada": "2010-01-01",
-      "dataSaida": "2011-01-01",
-      "descAlarm": "Alarme 1",
-      "descEquipamento": "Equipamento 1",
-      "id": 1
-    },
-    {
-      "descAlarm": "Alarme 2",
+      "descAlarm": "Alarme 4",
       "descEquipamento": "Equipamento 2",
       "dataEntrada": "2011-01-01",
       "dataSaida": "2018-03-03",
-      "statusAlarme": "Off",
+      "statusAlarme": "On",
       "id": 2
     },
     {
@@ -54,6 +61,22 @@
       "descEquipamento": "Equipamento 5",
       "statusAlarme": "On",
       "id": 3
+    },
+    {
+      "dataEntrada": "2018-01-01",
+      "dataSaida": "2019-04-02",
+      "descAlarm": "Alarme 4",
+      "descEquipamento": "Equipamento 2",
+      "statusAlarme": "Off",
+      "id": 4
+    },
+    {
+      "dataEntrada": "2019-10-10",
+      "dataSaida": "2019-12-10",
+      "descAlarm": "Alarme 2",
+      "descEquipamento": "Equipamento 2",
+      "statusAlarme": "On",
+      "id": 5
     }
   ]
 }

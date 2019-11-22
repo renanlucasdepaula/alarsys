@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import axios from 'axios'
-import Main from '../template/Main'
+import React, { Component } from 'react';
+import axios from 'axios';
+import Main from '../template/Main';
 
 const baseUrl = 'http://localhost:3000/AlarmesAtuados';
 // Estado inicial de cadastro de equipamento
@@ -13,14 +13,10 @@ export default class AlarmAt extends Component {
 
     state = {...initialState};
 
-    componentWillMount(){
+    componentDidMount(){
         axios(baseUrl).then(resp => {
             this.setState({ list: resp.data})
         })
-    };
-
-    clear() {
-        this.setState({ Alarmes: initialState.Alarmes })
     };
 
     save() {
@@ -179,6 +175,7 @@ export default class AlarmAt extends Component {
     render () {
         return (
             <Main>
+                <div className='display-4'>Cadastro de Alarmes Atuados</div>
                 {this.renderForm()}
                 {this.renderTable()}
             </Main>

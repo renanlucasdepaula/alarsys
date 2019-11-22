@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import axios from 'axios'
-import Main from '../template/Main'
+import React, { Component } from 'react';
+import axios from 'axios';
+import Main from '../template/Main';
 
 const baseUrl = 'http://localhost:3000/Alarmes';
 // Estado inicial de cadastro de equipamento
@@ -12,15 +12,11 @@ const initialState = {
 export default class AlarmCrud extends Component {
 
     state = {...initialState};
-
-    componentWillMount(){
+// Será descontinuado!
+    componentDidMount(){
         axios(baseUrl).then(resp => {
             this.setState({ list: resp.data})
         })
-    };
-
-    clear() {
-        this.setState({ initialState })
     };
 
     save() {
@@ -56,8 +52,9 @@ export default class AlarmCrud extends Component {
                             <input type="text" className="form-control"
                                    name="descAlarme"
                                    value={this.alarm}
-                                   onChange={e => this.updateField(e)}
-                                   placeholder="Digite a descrição do Alarme" />
+                                   onChange={(e) => this.updateField(e)}
+                                   placeholder="Digite a descrição do alarme"
+                                   />
                         </div>
                     </div>
 
@@ -167,6 +164,7 @@ export default class AlarmCrud extends Component {
     render () {
         return (
             <Main>
+                <div className='display-4'>Cadastro de Alarmes</div>
                 {this.renderForm()}
                 {this.renderTable()}
             </Main>

@@ -18,7 +18,7 @@ export default props =>
             <Link to="/alarmat" >
                 <span>Alarmes Atuados <i className="fa fa-thumbs-o-up"></i></span>
             </Link>
-            <Link to="/users" >
+            <Link to="/management" >
                 <span>Gerenciamento <i className="fa fa-area-chart"></i></span>
             </Link>
         </nav>

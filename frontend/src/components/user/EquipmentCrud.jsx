@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import axios from 'axios'
-import Main from '../template/Main'
+import React, { Component } from 'react';
+import axios from 'axios';
+import Main from '../template/Main';
 
 const baseUrl = 'http://localhost:3000/Equipamentos';
 // Estado inicial de cadastro de equipamento
@@ -13,15 +13,12 @@ export default class EquipmentCrud extends Component {
 
     state = {...initialState};
 
-    componentWillMount(){
+    componentDidMount(){
         axios(baseUrl).then(resp => {
             this.setState({ list: resp.data})
         })
     };
 
-    clear() {
-        this.setState({ Equipamentos: initialState.Equipamentos })
-    };
 
     save() {
         const equipment = this.state.equipment;
@@ -166,6 +163,7 @@ export default class EquipmentCrud extends Component {
     render () {
         return (
             <Main>
+                <div className='display-4'>Cadastro de Equipamentos</div>
                 {this.renderForm()}
                 {this.renderTable()}
             </Main>
