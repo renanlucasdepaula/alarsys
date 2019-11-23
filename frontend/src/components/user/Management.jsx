@@ -4,10 +4,7 @@ import Main from '../template/Main';
 import { useState } from 'react';
 const baseUrl = 'http://localhost:3000/AlarmesAtuados'
 // Estado inicial
-//const initialState = {
-  //  alarm: { dataEntrada: '' , dataSaida: '' , descAlarm: '' , descEquipamento: '' , statusAlarme: '' , id: '' },
-  //  list: []
-// // // // // //};
+
 export default class Management extends Component {
 
 
@@ -46,7 +43,7 @@ export default class Management extends Component {
                 </tr>
                 </thead>
                 <tbody>
-                {this.renderRows(this.state.list)}
+                {this.renderRows}
                 </tbody>
             </table>
         )
@@ -59,8 +56,10 @@ export default class Management extends Component {
         const url = alarm ? `${baseUrl}?descAlarm=${alarm}`: baseUrl;
         axios[method](url,alarm)
             .then(resp => {
-                this.renderRows(resp.data)
-                 console.log(resp.data[0])
+                this.setState({state.list},() => resp.data )
+                this.renderRows()
+
+
             })
     }
 
@@ -104,9 +103,8 @@ export default class Management extends Component {
     }
 
 
-    renderRows(stateArray) {
-        console.log(stateArray)
-        return stateArray.map(alarm =>{
+    renderRows() {
+        return this.state.list.map(alarm =>{
                 return(
                     <tr key={alarm.id}>
                         <td>{alarm.id}</td>
